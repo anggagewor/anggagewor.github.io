@@ -1,3 +1,8 @@
-remote_theme: pages-themes/minimal@v0.2.0
+title: Angga Purnama
+description: Software Engineer from Indonesia — Building developer tools & shipping fast.
+url: https://anggagewor.github.io
+baseurl: ""
+
+# No remote theme — we use custom layout
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-seo-tag
