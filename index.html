@@ -8,7 +8,6 @@ title: Angga Purnama — Software Engineer
   <!-- HERO -->
   <section class="hero">
     <div class="hero__glow"></div>
-    <div class="hero__badge">Available for collaboration</div>
     <h1>Hey, I'm <span>Angga</span> 👋</h1>
     <p class="hero__subtitle">
       Software engineer from Indonesia. I build developer tools and weekend projects 
@@ -38,7 +37,7 @@ title: Angga Purnama — Software Engineer
     </div>
     <div class="projects-grid">
       <div class="project-card fade-up">
-        <div class="project-card__icon">📦</div>
+        <img class="project-card__banner" src="https://raw.githubusercontent.com/anggagewor/crate/main/assets/ss.png" alt="Crate banner">
         <h3 class="project-card__title">Crate</h3>
         <p class="project-card__desc">
           Local-first dev toolbox. JSON formatter, UUID gen, hashing, JWT inspector, and more. 
@@ -52,7 +51,7 @@ title: Angga Purnama — Software Engineer
         </div>
       </div>
       <div class="project-card fade-up">
-        <div class="project-card__icon">🚀</div>
+        <img class="project-card__banner" src="https://raw.githubusercontent.com/anggagewor/snag/main/assets/logo.png" alt="Snag banner">
         <h3 class="project-card__title">Snag</h3>
         <p class="project-card__desc">
           API client built for speed. Native performance, no Electron bloat. 
@@ -65,7 +64,7 @@ title: Angga Purnama — Software Engineer
         </div>
       </div>
       <div class="project-card fade-up">
-        <div class="project-card__icon">🏗️</div>
+        <img class="project-card__banner" src="https://raw.githubusercontent.com/anggagewor/purdia/main/docs/banner.png" alt="Purdia banner">
         <h3 class="project-card__title">Purdia</h3>
         <p class="project-card__desc">
           Vue 3 admin dashboard with 40+ components. POS, CRM, HRM, Accounting — all included. 
@@ -76,6 +75,20 @@ title: Angga Purnama — Software Engineer
           <span class="project-card__tag">Laravel</span>
           <span class="project-card__tag">DDD</span>
           <span class="project-card__tag">40+ Components</span>
+        </div>
+      </div>
+      <div class="project-card fade-up">
+        <img class="project-card__banner" src="https://raw.githubusercontent.com/anggagewor/personal/main/docs/banner.png" alt="Personal banner">
+        <h3 class="project-card__title">Personal</h3>
+        <p class="project-card__desc">
+          Personal productivity dashboard. Notes, tasks, habits, finance tracker, market watchlist, 
+          pomodoro, and more — all in one local app.
+        </p>
+        <div class="project-card__tags">
+          <span class="project-card__tag">Laravel 13</span>
+          <span class="project-card__tag">Vue 3</span>
+          <span class="project-card__tag">TypeScript</span>
+          <span class="project-card__tag">DDD Modular</span>
         </div>
       </div>
     </div>
@@ -174,12 +187,15 @@ title: Angga Purnama — Software Engineer
   <!-- FOOTER -->
   <footer class="footer">
     <p class="footer__quote">Build tools. Ship fast. Keep learning.</p>
-    <p class="footer__copy">© 2022 - 2026 Angga Purnama</p>
+    <p class="footer__copy">© 2022 - <span id="current-year"></span> Angga Purnama</p>
   </footer>
 
 </div>
 
 <script>
+// Dynamic year
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
