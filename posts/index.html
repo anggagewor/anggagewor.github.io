@@ -13,8 +13,9 @@ permalink: /posts/
   </section>
 
   <section class="posts-list">
-    {% assign posts = site.pages | where_exp: "page", "page.url contains '/posts/' and page.url != '/posts/'" %}
-    {% for post in posts %}
+    {% assign all_pages = site.pages | where_exp: "page", "page.url contains '/posts/'" %}
+    {% for post in all_pages %}
+    {% unless post.url == "/posts/" %}
     {% if post.title %}
     <a href="{{ post.url }}" class="posts-list__item">
       <div class="posts-list__info">
@@ -28,6 +29,7 @@ permalink: /posts/
       {% endif %}
     </a>
     {% endif %}
+    {% endunless %}
     {% endfor %}
   </section>
 
